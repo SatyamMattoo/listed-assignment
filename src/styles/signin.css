@@ -1,0 +1,126 @@
+.signin {
+    display: flex;
+    flex-direction: column;
+}
+
+.signin h1 {
+    margin: 1vh;
+    color: #000;
+    font-size: 36px;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+
+.signin p {
+    margin: 1vh;
+    color: #000;
+    font-size: 16px;
+    font-family: Lato;
+}
+
+.options {
+    display: flex;
+    margin: 2vh;
+}
+
+.google,
+.apple {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px 0 10px;
+    width: 180px;
+    height: 30px;
+    border-radius: 10px;
+    background: #FFF;
+    border: none;
+    cursor: pointer;
+}
+
+.google p,
+.apple p {
+    color: var(--secondary-text, #858585);
+    text-align: center;
+    font-size: 12px;
+    font-family: Montserrat;
+}
+
+form {
+    width: 385px;
+    height: 317px;
+    margin: 1vh;
+    padding: 2vh;
+    border-radius: 20px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+}
+
+.form p {
+    color: #000;
+    font-size: 16px;
+    font-family: Lato;
+    margin: 2vh;
+}
+
+.form input {
+    margin: 1vh;
+    margin-left: 2.5vh;
+    width: 315px;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    background: #F5F5F5;
+}
+
+.form a {
+    margin: 1vh 0vh 1vh 2vh;
+    color: #346BD4;
+    font-size: 16px;
+    font-family: Lato;
+    text-decoration: none;
+}
+
+.submitBtn {
+    margin: 1vh;
+    margin-left: 2vh;
+    color: #FFF;
+    border: none;
+    width: 325px;
+    height: 40px;
+    border-radius: 10px;
+    background: #000;
+    cursor: pointer;
+}
+
+.submitBtn:hover {
+    background-color: #000000de;
+}
+
+.register {
+    color: #858585;
+    text-align: center;
+    font-size: 16px;
+    font-family: Lato;
+}
+
+.register a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 720px) {
+    .signin {
+        align-items: center;
+    }
+
+    .form {
+        width: 330px;
+    }
+
+    .google,
+    .apple {
+        width: 160px;
+    }
+
+}

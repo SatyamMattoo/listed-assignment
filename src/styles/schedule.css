@@ -1,0 +1,54 @@
+.schedule {
+    width: 50vh;
+    margin: 1vh 0 0vh 2vh;
+    background-color: #fff;
+    padding: 3vh;
+    border-radius: 20px;
+    height: 24vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.scheduleHeading {
+    width: 50vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.meeting,
+.operation {
+    display: flex;
+    align-items: center;
+    margin: 2vh 0 0 0;
+}
+
+.greenLine,
+.blueLine {
+    height: 8vh;
+    width: 2px;
+    margin-right: 10px;
+}
+
+.greenLine {
+    background-color: rgba(155, 221, 124, 1);
+
+}
+
+.blueLine {
+    background-color: rgba(105, 114, 195, 1);
+
+}
+
+.head {
+    color: #666;
+    font-size: 14px;
+    font-family: Lato;
+    font-weight: 700;
+}
+
+.location,
+.time {
+    color: #999;
+    font-size: 12px;
+    font-family: Lato;
+}

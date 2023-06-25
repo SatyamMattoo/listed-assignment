@@ -1,0 +1,48 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 2.5% 0% 2% 0%;
+}
+
+.heading p {
+    color: #000;
+    font-size: 24px;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+
+.search {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search button {
+    background: #fff;
+    padding: 4px;
+    margin: 0 5px 0 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+
+}
+
+.search input {
+    background: #fff;
+    padding: 2px;
+    border: none;
+    width: 80%;
+    outline: none;
+}
+
+.search img {
+    margin: 0 10px 0 10px;
+}
+
+.profile {
+    border-radius: 100%;
+    cursor: pointer;
+}

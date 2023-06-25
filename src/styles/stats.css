@@ -1,0 +1,52 @@
+.stats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats div {
+    width: 22%;
+    height: 17vh;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stats div img {
+    width: 15px;
+    margin-left: 80%;
+}
+
+.stats div span {
+    width: 80%;
+    color: #000;
+    font-size: 14px;
+    font-family: Lato;
+    margin-left: 17%;
+}
+
+.statValue {
+    margin-left: 17%;
+    width: 80%;
+    font-size: 24px;
+    font-family: Open Sans;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 5px 0 5px 0;
+}
+
+.totalRevenues {
+    background-color: #DDEFE0;
+}
+
+.totalUsers {
+    background-color: #DEE0EF;
+}
+
+.totalTransactions {
+    background-color: #F4ECDD;
+}
+
+.totalLikes {
+    background-color: #EFDADA;
+}

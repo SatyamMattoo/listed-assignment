@@ -6,8 +6,15 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
-import  app  from "./firebase.js";
+import app from "./firebase.js";
 import { useEffect, useState } from "react";
+import Signin from "./components/Signin";
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import Stats from "./components/Stats";
+import Graph from "./components/Graph";
+import Products from "./components/Products";
+import Schedule from "./components/Schedule";
 
 const auth = getAuth(app);
 const logOut = () => signOut(auth);
@@ -18,69 +25,53 @@ const loginGoogle = () => {
 };
 
 function App() {
+  const [user, setUser] = useState(false);
 
-  const [user,setUser]= useState(false);
-
+  const photoURL = (user)?user.photoURL:"";
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth,(data)=>{
-    setUser(data);
+    const unsubscribe = onAuthStateChanged(auth, (data) => {
+      setUser(data);
     });
     return () => {
       unsubscribe();
-    }
-  },[])
+    };
+  }, []);
 
   return (
     <>
-    {
-    (!user)?
-      <div className="box">
-        <div className="left-side">
-          <div className="board">
-            <p>Board.</p>
-          </div>
-        </div>
-        <div className="right-side">
-          <div className="signin">
-            <h1>Sign In</h1>
-            <p>Sign In to your account</p>
-            <div className="options">
-              <button className="google" onClick={loginGoogle}>
-                <img
-                  src="https://img.icons8.com/?size=512&id=V5cGWnc9R4xj&format=png"
-                  alt=""
-                  height={"15px"}
-                />
-                <p>Sign In with Google</p>
-              </button>
-              <button className="apple">
-                <img
-                  src="https://img.icons8.com/?size=512&id=890&format=png"
-                  alt=""
-                  height={"15px"}
-                />
-                <p>Sign In with Apple</p>
-              </button>
+      {!user ? (
+        <div className="box">
+          <div className="left-side">
+            <div className="board">
+              <p>Board.</p>
             </div>
-            <form className="form">
-              <p>Email address</p>
-              <input type="text" placeholder="Enter your email" />
-              <p>Password</p>
-              <input type="password" placeholder="Enter your password" />
-              <a href="/">Forgot Password?</a>
-              <button className="submitBtn">Sign In</button>
-            </form>
-            <p className="register">
-              Don't have a account? <a href="/">Register here</a>
-            </p>
+          </div>
+          <div className="right-side">
+            <Signin loginGoogle={loginGoogle} />
           </div>
         </div>
-      </div>
-    :
-    <div className="container">
-      <button onClick={logOut}>logout</button>
-    </div>  
-    }
+      ) : (
+        <div className="dashboard">
+          <div className="sidebar">
+            <Sidebar />
+          </div>
+          <div className="main">
+            <div className="first">
+              <Header photo={photoURL} logOut={logOut}/>
+            </div>
+            <div className="second">
+              <Stats />
+            </div>
+            <div className="third">
+              <Graph />
+            </div>
+            <div className="fourth">
+              <Products />
+              <Schedule />
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
