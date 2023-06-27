@@ -6,7 +6,7 @@
 @import "./stats.css";
 @import "./graph.css";
 @import "./products.css";
-
+@import "./schedule.css";
 
 * {
     padding: 0;
@@ -86,11 +86,12 @@
 }
 
 .third {
-    width: 88%;
-    padding: 40px;
+    width: 90%;
+    padding: 5%;
     display: flex;
     flex-direction: column;
-    height: 25%;
+    justify-content: center;
+    height: 24%;
     margin-top: 2vh;
     background-color: #fff;
     border-radius: 20px;
@@ -100,24 +101,11 @@
 .fourth {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 
 @media screen and (min-height: 850px) {
-    .stats {
-        flex-direction: column;
-    }
-
-    .stats>div {
-        margin: 1vh;
-    }
-
-    .dashboard,
-    .main {
-        background-color: #fff;
-    }
-
 
 
 }

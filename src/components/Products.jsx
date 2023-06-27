@@ -23,12 +23,12 @@ const Products = () => {
             <div className="yellowDot"></div>
             <p className="shorts">Custom Shorts</p>
           </div>
-          <p className="yellowPercent">55%</p>
+          <p className="yellowPercent">31%</p>
           <div className="red2">
             <div className="redDot"></div>
             <p className="hoodies">Super Hoodies</p>
           </div>
-          <p className="redPercent">55%</p>
+          <p className="redPercent">14%</p>
         </div>
       </div>
     </div>

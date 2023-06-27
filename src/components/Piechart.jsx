@@ -8,17 +8,17 @@ export const data = {
   labels: ["Basic Tees", "Custom Pants", "Super Hoodies"],
   datasets: [
     {
-      label: "# of Votes",
+      label: "%",
       data: [55, 31, 14],
       backgroundColor: [
-        "rgba(255, 99, 132, 0.2)",
-        "rgba(54, 162, 235, 0.2)",
-        "rgba(255, 206, 86, 0.2)",
+        "rgba(233, 160, 160, 1)",
+        "rgba(246, 220, 125, 1)",
+        "rgba(155, 221, 124, 1)",
       ],
       borderColor: [
-        "rgba(255, 99, 132, 1)",
-        "rgba(54, 162, 235, 1)",
-        "rgba(255, 206, 86, 1)",
+        "rgba(233, 160, 160, 1)",
+        "rgba(246, 220, 125, 1)",
+        "rgba(155, 221, 124, 1)",
       ],
       borderWidth: 1,
     },

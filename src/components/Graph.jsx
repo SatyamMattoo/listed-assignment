@@ -45,6 +45,8 @@ export const options = {
   },
 };
 
+
+
 const labels = ["Week 1", "Week 2", "Week 3", "Week 4"];
 
 export const data = {
