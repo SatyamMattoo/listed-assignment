@@ -1,9 +1,11 @@
 .stats {
     display: flex;
     justify-content: space-between;
+    overflow: scroll;
 }
 
 .stats div {
+    overflow: scroll;
     width: 22%;
     height: 17vh;
     border-radius: 20px;
